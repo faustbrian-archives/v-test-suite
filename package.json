@@ -1,0 +1,82 @@
+{
+	"name": "@faustbrian/common-value-store-test-suite",
+	"version": "0.1.0",
+	"description": "Test suite for common-value-store API compliance.",
+	"author": "Brian Faust <hello@basecode.sh>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/faustbrian/common-value-store-test-suite/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:faustbrian/common-value-store-test-suite.git"
+	},
+	"homepage": "https://github.com/faustbrian/common-value-store-test-suite",
+	"files": [
+		"dist"
+	],
+	"main": "dist/index",
+	"types": "dist/index",
+	"scripts": {
+		"prepublishOnly": "yarn format && yarn test && yarn build",
+		"clean": "rimraf .coverage dist tmp",
+		"build": "yarn clean && tsc",
+		"build:watch": "yarn build -w",
+		"format": "yarn lint && yarn prettier",
+		"lint": "tslint -c tslint.json 'src/**/*.ts' --fix",
+		"prettier": "prettier --write \"./*.{ts,js,json,md}\" \"./**/*.{ts,js,json,md}\"",
+		"test": "jest",
+		"test:watch": "jest --watchAll"
+	},
+	"dependencies": {
+		"@faustbrian/common-value-store": "^0.1.0"
+	},
+	"devDependencies": {
+		"@sindresorhus/tsconfig": "^0.3.0",
+		"@types/jest": "^24.0.11",
+		"@types/node": "^11.13.7",
+		"jest": "^24.7.1",
+		"jest-extended": "^0.11.1",
+		"prettier": "^1.17.0",
+		"rimraf": "^2.6.3",
+		"ts-jest": "^24.0.2",
+		"tslint": "^5.16.0",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.4.5"
+	},
+	"jest": {
+		"testEnvironment": "node",
+		"bail": true,
+		"verbose": true,
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"testMatch": [
+			"**/*.test.ts"
+		],
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json",
+			"node"
+		],
+		"collectCoverage": true,
+		"coverageDirectory": "<rootDir>/.coverage",
+		"collectCoverageFrom": [
+			"src/**/*.ts",
+			"!**/node_modules/**"
+		],
+		"coverageReporters": [
+			"json",
+			"lcov",
+			"text",
+			"clover",
+			"html"
+		],
+		"setupFilesAfterEnv": [
+			"jest-extended"
+		]
+	}
+}

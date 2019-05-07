@@ -1,4 +1,5 @@
 import { IValueStoreSync } from "@faustbrian/common-value-store";
+// tslint:disable-next-line: no-import-side-effect
 import "jest-extended";
 
 export const complianceTestsSync = <V>(store: IValueStoreSync<V>, items: V[]): void => {

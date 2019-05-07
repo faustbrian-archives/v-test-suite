@@ -1,4 +1,5 @@
 import { IValueStoreAsync } from "@faustbrian/common-value-store";
+// tslint:disable-next-line: no-import-side-effect
 import "jest-extended";
 
 export const complianceTestsAsync = <V>(store: IValueStoreAsync<V>, items: V[]): void => {
@@ -7,7 +8,7 @@ export const complianceTestsAsync = <V>(store: IValueStoreAsync<V>, items: V[]):
 	beforeEach(() => store.flush());
 
 	it("should get all of the items in the store", async () => {
-		store.putMany(items);
+		await store.putMany(items);
 
 		await expect(store.all()).resolves.toEqual(items);
 	});

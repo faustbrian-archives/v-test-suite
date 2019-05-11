@@ -1,14 +1,14 @@
 {
-	"name": "@faustbrian/common-value-store-test-suite",
+	"name": "@veestore/test-suite",
 	"version": "0.1.0",
-	"description": "Test suite for common-value-store API compliance.",
-	"homepage": "https://github.com/faustbrian/common-value-store-test-suite",
+	"description": "Test suite for Vee Store API compliance.",
+	"homepage": "https://github.com/veestore/test-suite",
 	"bugs": {
-		"url": "https://github.com/faustbrian/common-value-store-test-suite/issues"
+		"url": "https://github.com/veestore/test-suite/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:faustbrian/common-value-store-test-suite.git"
+		"url": "git@github.com:veestore/test-suite.git"
 	},
 	"license": "MIT",
 	"author": "Brian Faust <hello@basecode.sh>",
@@ -27,7 +27,7 @@
 		"prettier": "prettier --write \"./*.{ts,js,json,md}\" \"./**/*.{ts,js,json,md}\""
 	},
 	"dependencies": {
-		"@faustbrian/common-value-store": "^0.2.0",
+		"@veestore/veestore": "^0.1.0",
 		"jest-extended": "^0.11.1"
 	},
 	"devDependencies": {

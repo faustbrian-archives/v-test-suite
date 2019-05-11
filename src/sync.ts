@@ -1,4 +1,4 @@
-import { IValueStoreSync } from "@faustbrian/common-value-store";
+import { IValueStoreSync } from "@veestore/veestore";
 // tslint:disable-next-line: no-import-side-effect
 import "jest-extended";
 

@@ -1,17 +1,17 @@
-# common-value-store-test-suite
+# @veestore/test-suite
 
 > Test suite for common-value-store API compliance.
 
-[![Latest Version](https://badgen.now.sh/npm/v/@faustbrian/common-value-store-test-suite)](https://www.npmjs.com/package/@faustbrian/common-value-store-test-suite)
-[![Node Engine](https://badgen.now.sh/npm/node/@faustbrian/common-value-store-test-suite)](https://www.npmjs.com/package/@faustbrian/common-value-store-test-suite)
-[![Build Status](https://badgen.now.sh/circleci/github/faustbrian/common-value-store-test-suite)](https://circleci.com/gh/faustbrian/common-value-store-test-suite)
-[![Codecov](https://badgen.now.sh/codecov/c/github/faustbrian/common-value-store-test-suite)](https://codecov.io/gh/faustbrian/common-value-store-test-suite)
+[![Latest Version](https://badgen.now.sh/npm/v/@veestore/test-suite)](https://www.npmjs.com/package/@veestore/test-suite)
+[![Node Engine](https://badgen.now.sh/npm/node/@veestore/test-suite)](https://www.npmjs.com/package/@veestore/test-suite)
+[![Build Status](https://badgen.now.sh/circleci/github/veestore/test-suite)](https://circleci.com/gh/veestore/test-suite)
+[![Codecov](https://badgen.now.sh/codecov/c/github/veestore/test-suite)](https://codecov.io/gh/veestore/test-suite)
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
 ## Installation
 
 ```bash
-yarn add @faustbrian/common-value-store-test-suite
+yarn add @veestore/test-suite
 ```
 
 ## Testing

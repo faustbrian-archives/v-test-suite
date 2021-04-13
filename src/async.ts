@@ -1,8 +1,13 @@
-import { IValueStoreAsync } from "@konceiver/v";
-// tslint:disable-next-line: no-import-side-effect
+/* eslint-disable jest/no-export */
+
 import "jest-extended";
 
-export const complianceTestsAsync = <V>(store: IValueStoreAsync<V>, items: V[]): void => {
+import { IValueStoreAsync } from "@konceiver/v";
+
+export const complianceTestsAsync = <V>(
+	store: IValueStoreAsync<V>,
+	items: V[]
+): void => {
 	const itemsBool: boolean[] = new Array(5).fill(true);
 
 	beforeEach(() => store.flush());
@@ -14,7 +19,7 @@ export const complianceTestsAsync = <V>(store: IValueStoreAsync<V>, items: V[]):
 	});
 
 	it("should put an item into the store", async () => {
-		await expect(store.put(items[0])).resolves.toBeTrue();
+		await expect(store.put(items[0]!)).resolves.toBeTrue();
 	});
 
 	it("should put many items into the store", async () => {
@@ -28,8 +33,8 @@ export const complianceTestsAsync = <V>(store: IValueStoreAsync<V>, items: V[]):
 	});
 
 	it("should remove an item from the store", async () => {
-		await expect(store.put(items[0])).resolves.toBeTrue();
-		await expect(store.forget(items[0])).resolves.toBeTrue();
+		await expect(store.put(items[0]!)).resolves.toBeTrue();
+		await expect(store.forget(items[0]!)).resolves.toBeTrue();
 	});
 
 	it("should remove many items from the store", async () => {

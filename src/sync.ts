@@ -1,8 +1,13 @@
-import { IValueStoreSync } from "@konceiver/v";
-// tslint:disable-next-line: no-import-side-effect
+/* eslint-disable jest/no-export */
+
 import "jest-extended";
 
-export const complianceTestsSync = <V>(store: IValueStoreSync<V>, items: V[]): void => {
+import { IValueStoreSync } from "@konceiver/v";
+
+export const complianceTestsSync = <V>(
+	store: IValueStoreSync<V>,
+	items: V[]
+): void => {
 	const itemsBool: boolean[] = new Array(5).fill(true);
 
 	beforeEach(() => store.flush());
@@ -14,7 +19,7 @@ export const complianceTestsSync = <V>(store: IValueStoreSync<V>, items: V[]): v
 	});
 
 	it("should put an item into the store", () => {
-		expect(store.put(items[0])).toBeTrue();
+		expect(store.put(items[0]!)).toBeTrue();
 	});
 
 	it("should put many items into the store", () => {
@@ -28,8 +33,8 @@ export const complianceTestsSync = <V>(store: IValueStoreSync<V>, items: V[]): v
 	});
 
 	it("should remove an item from the store", () => {
-		expect(store.put(items[0])).toBeTrue();
-		expect(store.forget(items[0])).toBeTrue();
+		expect(store.put(items[0]!)).toBeTrue();
+		expect(store.forget(items[0]!)).toBeTrue();
 	});
 
 	it("should remove many items from the store", () => {

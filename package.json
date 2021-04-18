@@ -26,10 +26,10 @@
 		"dist"
 	],
 	"dependencies": {
-		"@konceiver/v": "^1.0.0"
+		"@konceiver/v": "^1.0.1"
 	},
 	"devDependencies": {
-		"@konceiver/tease": "^2.0.0"
+		"@konceiver/tease": "^2.0.1"
 	},
 	"types": "dist/index"
 }
